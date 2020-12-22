@@ -1,31 +1,51 @@
 {
-  "name": "greenhellblog",
+  "name": "GreenHellBlog",
   "version": "1.0.0",
-  "description": "Grenn Hell blog",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "start": "nodemon --env.dev --watch webpack.config.js --watch webpack/webpack.dev.js  --watch webpack/webpack.parts.js --watch .browserslistrc --watch .babelrc --exec \"webpack-dev-server\"",
+    "build": "webpack -p --env.prod",
+    "test": "webpack --watch webpack.config.js --watch .browserslistrc --watch .babelrc --exec \"webpack-dev-server\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NaN-DEV/green-hell.git"
+    "url": "git+https://na3@bitbucket.org/na3/anhol.git"
   },
   "keywords": [
-    "Green",
-    "Hell",
-    "Blog"
+    "NaN"
   ],
   "author": "Paweł Niedźwiecki",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NaN-DEV/green-hell/issues"
-  },
-  "homepage": "https://github.com/NaN-DEV/green-hell#readme",
+  "homepage": "https://bitbucket.org/na3/anhol#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^4.5.0",
-    "prettier": "^2.2.1",
-    "webpack": "^5.11.0",
-    "webpack-cli": "^4.2.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "autoprefixer": "^9.5.0",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^2.0.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.6.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
+    "postcss-loader": "^3.0.0",
+    "prettier": "2.2.1",
+    "resolve-url-loader": "^3.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   }
 }

@@ -1,0 +1,9 @@
+[production staging]
+> 0.5%
+ie 9
+safari 10
+
+[development]
+> 0.5%
+ie 9
+safari 10

@@ -1,0 +1,594 @@
+//####################################################################################################################
+//####################################################################################################################
+//########################################### FONT SYSTEM CONFIG START ###############################################
+//####################################################################################################################
+//####################################################################################################################
+
+
+//* ---- Main setting font ---- */
+$bootscript-font-family-main : sans-serif,
+Arial; // font family default
+$bootscript-font-size-main : 15px; // font dize default
+$bootscript-line-height-main : 1.2; // line height default
+$bootscript-font-weight-main : 300; // font size default
+$bootscript-font-color-main : #000000; // font color default
+$bootscript-font-family-heading : sans-serif,
+Arial; // font family heading
+
+//* ---- Main size text all ( explattion variable  1 : FONT SIZE / 2 : BREAK POINT ) ---- */
+$bootscript-breakpoint-font-size : 9px 0,
+9px 540px,
+9px 720px,
+9px 960px,
+15px 1140px !default;
+
+//* ---- Main setting heading  ( explatttion variable  1 : NAME / 2 : SIZE / 3 : LINE HEIGHT / 4 : LETTER SPACING / 5 : FONT WEIGHT  / 6 : FONT )  ---- */
+$bootscript-setting-heading : h1 3rem 1.2 2px 700 sans-serif,
+h2 2.5rem 1.2 2px 700 sans-serif,
+h3 2rem 1.2 2px 700 sans-serif,
+h4 1.5rem 1.2 2px 700 sans-serif,
+h5 1rem 1.2 2px 700 sans-serif,
+h6 0.5rem 1.2 2px 700 sans-serif !default;
+
+//* ---- FONT OFF/ON ( TRUE = ON / FALSE = OFF ) ---- */
+$bootscript-font-on-off : true !default;
+
+
+//####################################################################################################################
+//####################################################################################################################
+//########################################### FONT SYSTEM CONFIG STOP ################################################
+//####################################################################################################################
+//####################################################################################################################
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//####################################################################################################################
+//####################################################################################################################
+//########################################### COLOR SYSTEM CONFIG START ##############################################
+//####################################################################################################################
+//####################################################################################################################
+
+
+//* ---- Color list ( explation variable  1 : NAME / 2 : HEX COLOR / 3 : RGB COLOR ) ---- */
+$bootscript-color-list: black #000000 rgb(0, 0, 0),
+white #ffffff rgb(255, 255, 255),
+yelow #FFCC00 rgb(255, 204, 255),
+athen #F3F3F4 rgb(243, 243, 244) !default;
+
+//* ---- Setting color selection ---- */
+$bootscript-main-selection-text-color : #000000 !default;
+$bootscript-main-selection-background-color : #979797 !default;
+
+//* ---- Main color text & background ---- */
+$bootscript-main-text-color : #000000 !default;
+$bootscript-main-background-color : #ffffff !default;
+
+//* ---- SETTING COLOR BG/TEXT/BUTTON ( TRUE = ON / FALSE = OFF ) ---- */
+$bootscript-background-color-on-off : true !default;
+$bootscript-text-color-on-off : true !default;
+$bootscript-button-color-normal-on-off : true !default;
+$bootscript-button-color-normal-out-line-on-off : true !default;
+$bootscript-button-color-radius-on-off : true !default;
+$bootscript-button-color-radius-out-line-on-off : true !default;
+
+
+//####################################################################################################################
+//####################################################################################################################
+//########################################### COLOR SYSTEM CONFIG STOP ###############################################
+//####################################################################################################################
+//####################################################################################################################
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//####################################################################################################################
+//####################################################################################################################
+//########################################## BUTTON SYSTEM CONFIG START ##############################################
+//####################################################################################################################
+//####################################################################################################################
+
+
+//* ---- Button main color ---- */
+$bootscript-button-main-color: #000000;
+
+//* ---- Button main text setting ---- */
+$bootscript-button-main-font-family: sans-serif,
+Arial;
+$bootscript-button-main-font-weight: bold;
+$bootscript-button-main-font-size: 15px;
+$bootscript-button-main-text-transform: none;
+$bootscript-button-main-line-height: 1;
+$bootscript-button-main-text-align: center;
+$bootscript-button-main-text-vertical-align: middle;
+
+//* ---- Button main radius setting ---- */
+$bootscript-button-main-border-radius: 0px;
+
+//* ---- Button main other setting ---- */
+$bootscript-button-main-padding: 15px 20px;
+$bootscript-button-main-border: 1px;
+$bootscript-button-main-transition-color: color 0.15s ease-in-out;
+$bootscript-button-main-transition-background-color: 0.15s ease-in-out;
+$bootscript-button-main-transition-border-color: 0.15s ease-in-out;
+$bootscript-button-main-transition-box-shadow: 0.15s ease-in-out;
+$bootscript-button-main-focus-outline: none;
+
+//* ---- Button type on or off ---- */
+$bootscript-button-on-off : true !default;
+
+
+//####################################################################################################################
+//####################################################################################################################
+//########################################## BUTTON SYSTEM CONFIG STOP ###############################################
+//####################################################################################################################
+//####################################################################################################################
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+//####################################################################################################################
+//####################################################################################################################
+//############################################ CORE SYSTEM ROOT START ################################################
+//####################################################################################################################
+//####################################################################################################################
+
+
+//* ---- core root ---- */
+@import 'core/core';
+
+
+.font-size_1 {
+    font-size: 18px;
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .fs-10 {
+        font-size: 13px;
+    }
+
+    .fs-20 {
+        font-size: 23px;
+    }
+
+    .icon {
+        width: 33px;
+        height: 33px;
+    }
+
+    .font-max {
+        font-size: 33px !important;
+    }
+}
+
+.font-size_2 {
+    font-size: 22px;
+
+    .btn {
+        font-size: 22px;
+    }
+
+    .fs-10 {
+        font-size: 15px;
+    }
+
+    .fs-20 {
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .font-max {
+        font-size: 35px !important;
+    }
+}
+
+.font-size_3 {
+    font-size: 25px;
+
+    .btn {
+        font-size: 25px;
+    }
+
+    .fs-10 {
+        font-size: 18px;
+    }
+
+    .fs-20 {
+        font-size: 28px;
+    }
+
+    .icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .font-max {
+        font-size: 38px !important;
+    }
+}
+
+.contrast {
+    background: #010101;
+    color: #ff0;
+
+    ::selection {
+        color: #000000 !important;
+        background: #ff0;
+    }
+
+    .bg-black {
+        background: #ff0 !important;
+
+        &::after {
+            background: #ff0 !important;
+        }
+
+        &::before {
+            background: #ff0 !important;
+        }
+    }
+
+    .bg-white {
+        background-color: #ff0 !important;
+
+        &::after {
+            background-color: #ff0 !important;
+        }
+
+        &::before {
+            background-color: #ff0 !important;
+        }
+    }
+
+    .bg-athen {
+        background-color: #000000 + 20 !important;
+
+        &::after {
+            background-color: #000000 + 20 !important;
+        }
+
+        &::before {
+            background-color: #000000 + 20 !important;
+        }
+    }
+
+    .text-black {
+        color: #ff0 !important;
+    }
+
+    .text-white {
+        color: #ff0 !important;
+    }
+
+    .btn-outline-white {
+        color: #ff0 !important;
+        border-color: #ff0 !important;
+
+        &:hover {
+            color: #000000 !important;
+            background: #ff0 !important;
+            border-color: #ff0 !important;
+        }
+    }
+
+    .btn-outline-black {
+        color: #ff0 !important;
+        border-color: #ff0 !important;
+
+        &:hover {
+            color: #000000 !important;
+            background: #ff0 !important;
+            border-color: #ff0 !important;
+        }
+    }
+
+    .bg-yelow {
+        background-color: #000000 !important;
+
+        &::after {
+            background-color: #000000 !important;
+        }
+
+        &::before {
+            background-color: #000000 !important;
+        }
+    }
+
+    .text-yelow {
+        color: #000000 !important;
+    }
+
+    a {
+        color: #ff0 !important;
+
+        &::before {
+            background: #ff0 !important;
+        }
+
+        &::after {
+            background: #ff0 !important;
+        }
+
+        &:hover {
+            color: #ffffff !important;
+            opacity: 1 !important;
+
+            &::before {
+                background: #ffffff !important;
+                opacity: 1 !important;
+            }
+
+            &::after {
+                background: #ffffff !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    label {
+        color: #ff0 !important;
+    }
+
+    input {
+        border-color: #ff0 !important;
+        color: #ff0 !important;
+
+        &::placeholder {
+            color: #ff0 !important;
+        }
+    }
+
+    input[type=input] {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+
+    textarea {
+        border-color: #ff0 !important;
+        color: #ff0 !important;
+
+        &::placeholder {
+            color: #ff0 !important;
+        }
+    }
+
+    .custom-select .select-selected {
+        background-color: #000000 !important;
+        border: 2px solid #ff0 !important;
+
+        &::after {
+            background: #ff0;
+        }
+    }
+
+    .select-items {
+        border: 2px solid #ff0 !important;
+        background: #ff0 + 50 !important;
+        color: #000000 !important;
+
+        div {
+            &:hover {
+                background: #000000 !important;
+                color: #ff0 !important;
+            }
+        }
+    }
+
+    .upload-file {
+        border: 2px solid #ff0 !important;
+
+        .input-file-container {
+            label {
+                background: #ff0 !important;
+                color: #000000 !important;
+
+                &:hover {
+                    background: #000000 + 30 !important;
+                    color: #ff0 !important;
+                }
+            }
+        }
+    }
+
+    .checkbox {
+        .checkbox-label {
+            &::before {
+                border: 2px solid #ff0 !important;
+                background-color: #000000 !important;
+            }
+
+            &::after {
+                background-color: #000000 !important;
+            }
+        }
+
+        input[type=checkbox]:checked+label:before {
+            background-color: #000000 !important;
+            border-color: #ff0 !important;
+        }
+
+        input[type=checkbox]:checked+label::after {
+            background-color: #ff0 !important;
+        }
+    }
+
+    .box-contact {
+        border-color: #ff0 !important;
+    }
+
+    .box-range {
+        box-shadow: 0px 2px 8px 5px rgba(255, 255, 0, 0.5);
+    }
+
+    .glider-dot {
+        background-color: #fff !important;
+
+        &:hover {
+            background-color: #ff0 !important;
+        }
+
+        &:focus {
+            background-color: #ff0 !important;
+        }
+    }
+
+    .glider-dot.active {
+        background-color: #ff0 !important;
+    }
+
+    .box-news {
+        .img {
+            a {
+
+                &:hover {
+                    background: #000000 !important;
+                    color: #ff0 !important;
+                }
+            }
+        }
+    }
+
+    .box-services {
+        ul {
+            li {
+                &::before {
+                    background: #ff0 !important;
+                }
+
+                &:hover {
+                    &::before {
+                        background: #ffffff !important;
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .box-faq {
+        .title {
+            color: #ff0;
+            box-shadow: 0px 2px 8px 5px rgba(255, 255, 0, 0.5);
+
+            &::after {
+                background: #ff0;
+            }
+
+            &:hover {
+                color: #fff !important;
+                box-shadow: 0px 2px 8px 5px rgba(255, 255, 255, 0.5);
+
+                &::after {
+                    background: #ffffff !important;
+                }
+            }
+        }
+    }
+
+    .history {
+
+        &::before {
+            background: #ff0 !important;
+        }
+
+
+        &::after {
+            background: #ff0 !important;
+        }
+
+        .order-lg-1,
+        .order-lg-3,
+        .order-lg-5,
+        .order-lg-7,
+        .order-lg-9,
+        .order-lg-11 {
+
+            &::before {
+                background: #ff0 !important;
+            }
+
+            &::after {
+                background: #000000 !important;
+            }
+        }
+    }
+
+
+
+    .section-hero_default.news {
+        background: #000000 !important;
+
+        .wrapper {
+            background: #ff0 !important;
+        }
+
+        .home-hero>* {
+            background: #ff0 !important;
+        }
+    }
+
+    .box-meta {
+
+        .info {
+            border-bottom: 5px solid #ff0 !important;
+
+            strong {
+                background: #ff0 !important;
+                color: #000000 !important;
+            }
+        }
+    }
+
+    //* ---- button social start ---- */
+    .btn-facebook,
+    .btn-twitter,
+    .btn-youtube,
+    .btn-instagram {
+        background-color: #ff0 !important;
+        color: #000000 !important;
+
+        text-shadow: none !important;
+
+        &:hover {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+
+            &::before {
+                background: #000000 !important;
+            }
+        }
+
+        &::before {
+            background: #000000 !important;
+        }
+    }
+
+    //* ---- button social stop ---- */
+
+    .box-share {
+        .title-share {
+            p {
+                &::after {
+                    background: #FF0 !important;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+//####################################################################################################################
+//####################################################################################################################
+//############################################ CORE SYSTEM ROOT STOP #################################################
+//####################################################################################################################
+//####################################################################################################################

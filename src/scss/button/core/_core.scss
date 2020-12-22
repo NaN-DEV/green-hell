@@ -1,0 +1,36 @@
+// START BULDING BUTTON NORMAL
+
+%bootscript-button-settings-global {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: $bootscript-button-main-font-weight;
+    font-family: $bootscript-button-main-font-family;
+    color: $bootscript-button-main-color;
+    text-align: $bootscript-button-main-text-align;
+    vertical-align: $bootscript-button-main-text-vertical-align;
+    user-select: none;
+    background-color: transparent;
+    border: $bootscript-button-main-border solid transparent;
+    border-radius: $bootscript-button-main-border-radius;
+    padding: $bootscript-button-main-padding;
+    text-transform: $bootscript-button-main-text-transform;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: $bootscript-button-main-font-size;
+    line-height: $bootscript-button-main-line-height;
+    transition: $bootscript-button-main-transition-color,
+        background-color $bootscript-button-main-transition-background-color,
+        border-color $bootscript-button-main-transition-border-color,
+        box-shadow $bootscript-button-main-transition-box-shadow;
+
+    &:focus {
+        outline: $bootscript-button-main-focus-outline;
+    }
+}
+
+
+@if $bootscript-button-on-off {
+    .btn {
+        @extend %bootscript-button-settings-global;
+    }
+}
