@@ -1,0 +1,364 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+
+    label {
+        max-width: 100%;
+        flex: 0 0 100%;
+        position: relative;
+        font-size: 12px;
+        font-weight: 700;
+        color: #000000;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+%input-clasic {
+    max-width: 100%;
+    flex: 0 0 100%;
+    height: 50px;
+    border: 2px solid #000000;
+    background: transparent;
+    position: relative;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    transition: all 0.3s;
+    padding: 0 15px;
+    font-size: 18px;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+        border: 2px solid #000000;
+        transition: all 0.3s;
+
+        &::placeholder {
+            transition: all 0.3s;
+            font-weight: normal;
+            color: #000000;
+            opacity: 0;
+        }
+    }
+
+    &::placeholder {
+        transition: all 0.3s;
+        font-weight: normal;
+        color: #000000;
+    }
+}
+
+input[type=text] {
+    @extend %input-clasic;
+}
+
+input[type=email] {
+    @extend %input-clasic;
+}
+
+input[type=password] {
+    @extend %input-clasic;
+}
+
+input[type=search] {
+    @extend %input-clasic;
+}
+
+input[type=submit] {
+    -webkit-appearance: none;
+}
+
+textarea {
+    @extend %input-clasic;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+
+    select {
+        display: none;
+        /*hide original SELECT element: */
+    }
+
+    .select-selected {
+        background-color: #FFCC00;
+        border: 2px solid #000000;
+        height: 50px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            position: absolute;
+            content: "";
+       
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+            width: 30px;
+            height: 30px;
+            display: block;
+            z-index: 50;
+            right: 0;
+            transition: all 0.3s;
+            background: #000000;
+        }
+    }
+
+    .select-arrow-active {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    padding: 8px 16px;
+    border-bottom: 2px solid transparent;
+    border-color: #000000;
+    cursor: pointer;
+}
+
+.select-items div:last-of-type {
+    border-bottom: 2px solid transparent;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #FFCC00;
+    top: calc(100% - 2px);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 2px solid #000000;
+
+    div:hover,
+    .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.select-hide {
+    display: none;
+}
+
+/* UPLOAD FILE START */
+.upload-file {
+    border: 2px solid #000000;
+    min-height: 50px;
+    padding: 9px 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    flex: 100%;
+    display: flex;
+    align-items: center;
+
+    .input-file-container {
+        position: relative;
+        text-align: center;
+        max-width: 125px;
+    }
+
+    .input-file-trigger {
+        display: block;
+        padding: 5px 20px;
+        background: #000000;
+        color: #FFCC00;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all .4s;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .input-file {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 225px;
+        opacity: 0;
+        padding: 14px 0;
+        cursor: pointer;
+    }
+
+    .input-file:hover+.input-file-trigger,
+    .input-file:focus+.input-file-trigger,
+    .input-file-trigger:hover,
+    .input-file-trigger:focus {
+        background: rgba($color: #000000, $alpha: 0.7);
+        color: #ffffff;
+    }
+
+    .file-return {
+        margin: 0;
+    }
+
+    .file-return {
+        font-weight: 400;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .upload-file {
+        max-width: 100%;
+        flex: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .input-file-container {
+            max-width: 100%;
+            flex: 100%;
+        }
+
+        .input-file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            padding: 14px 0;
+            cursor: pointer;
+        }
+
+        .input-file:hover+.input-file-trigger,
+        .input-file:focus+.input-file-trigger,
+        .input-file-trigger:hover,
+        .input-file-trigger:focus {
+            background: rgba($color: #000000, $alpha: 0.7);
+            color: #ffffff;
+        }
+
+        .file-return {
+            margin: 0;
+        }
+
+        .file-return {
+            max-width: 100%;
+            flex: 100%;
+            padding-top: 5px;
+            font-weight: 400;
+            font-size: 15px;
+            color: #000000;
+            padding-left: 15px;
+        }
+    }
+}
+
+/* UPLOAD FILE STOP */
+
+
+
+
+
+
+.checkbox {
+    .checkbox-input+.checkbox-label {
+        display: block;
+        cursor: pointer;
+        margin: 0;
+        min-height: 25px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 15px;
+
+        p {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        a {
+            font-weight: normal;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .checkbox-input {
+        display: none;
+    }
+
+    .checkbox-input+label {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            line-height: 1;
+            border: 2px solid #000;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            padding: 2.5px;
+            top: 0;
+            margin: 0;
+            color: transparent;
+            background: #ffffff;
+            transition: .2s;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+     
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+            width: 30px;
+            height: 30px;
+            display: block;
+            z-index: 50;
+            left: -2px;
+            top: -2px;
+            transition: all 0.3s;
+            background-color: #ffffff;
+        }
+    }
+
+    input[type=checkbox]+label:active:before {
+        transform: scale(0);
+    }
+
+    input[type=checkbox]:checked+label:before {
+        background-color: #ffffff;
+        border-color: #000000;
+    }
+
+    input[type=checkbox]:checked+label::after {
+        background-color: #000000;
+    }
+}

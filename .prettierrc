@@ -1,5 +1,8 @@
 {
   "semi": false,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "all",
   "overrides": [
     {
       "files": "*.test.js",
@@ -8,9 +11,9 @@
       }
     },
     {
-      "files": ["*.html", "legacy/**/*.js"],
+      "files": ["./src/**/*.html", "./src/**/*.js"],
       "options": {
-        "tabWidth": 4
+        "tabWidth": 2
       }
     }
   ]

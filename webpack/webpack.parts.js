@@ -27,7 +27,7 @@ module.exports.loadCSS = ({
   test = /\.s?[ac]ss$/,
   exclude = /node_modules/,
   extractOptions = {
-    filename: "bootscript.min.css",
+    filename: "nan.min.css",
   },
 } = {}) => {
   return {

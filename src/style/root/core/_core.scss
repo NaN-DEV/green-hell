@@ -1,0 +1,134 @@
+//####################################################################################################################
+//####################################################################################################################
+//############################################ ROOT SYSTEM SETTING START #############################################
+//####################################################################################################################
+//####################################################################################################################
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  color: $bootscript-font-color-main;
+  font-size: $bootscript-font-size-main;
+  font-weight: $bootscript-font-weight-main;
+  line-height: $bootscript-line-height-main;
+  font-family: $bootscript-font-family-main;
+  background-color: $bootscript-main-background-color;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: bold;
+}
+
+@each $heading in $bootscript-setting-heading {
+  $name: nth($heading, 1);
+  $font-size: nth($heading, 2);
+
+  #{$name} {
+    font-size: $font-size;
+  }
+}
+
+p,
+span {
+  font-weight: normal;
+}
+
+a {
+  opacity: 1;
+  transition: 0.3s;
+  text-decoration: none;
+  color: $bootscript-font-color-main;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer !important;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+input,
+textarea {
+  transition: 0.3s;
+
+  &::placeholder {
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+//####################################################################################################################
+//####################################################################################################################
+//############################################ ROOT SYSTEM SETTING STOP #############################################
+//####################################################################################################################
+//####################################################################################################################
