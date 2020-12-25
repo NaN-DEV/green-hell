@@ -1,752 +1,169 @@
 //####################################################################################################################
 //####################################################################################################################
-//############################################ CORE SYSTEM BOX START #################################################
+//############################################ SYSTEM BOX START ######################################################
 //####################################################################################################################
 //####################################################################################################################
 
+.article-header {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  position: relative;
+  min-height: calc(50% - 3rem);
 
-//* ---- core box ---- */
-@import 'core/core';
-
-//* ---- nav contact box ---- */
-
-.box-contact {
-    border-left: 2px solid #ffffff;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: none;
-    color: #000000;
-    padding: 10px 15px;
-    transition: all 0.3s;
-
+  a {
+    flex: 100%;
+    max-width: 100%;
+    position: relative;
     &:hover {
-        background: #000000 !important;
-        color: #FFCC00;
-        transition: all 0.3s;
+      opacity: 1;
+      h2 {
+        opacity: 0.6 !important;
+      }
     }
+  }
 
-    strong {
-        flex: 100%;
-        max-width: 100%;
-        text-align: center;
+  .img {
+    flex: 100%;
+    max-width: 100%;
+    position: relative;
+    min-height: 31.3rem;
+    background-repeat: repeat;
+    background-image: url(../../assets/img/bgSlider.png);
+    background-position: center center;
+
+    @media (min-width: 640px) {
+      min-height: 11.3rem;
     }
-
-    span {
-        flex: 100%;
-        max-width: 100%;
-        text-align: center;
-        font-weight: bold;
+    @media (min-width: 1258px) {
+      min-height: 15.7rem;
     }
-}
+  }
 
-//* ---- nav range box start ---- */
+  .content {
+    flex: 100%;
+    padding: 2rem;
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-color: #ececec;
 
-.box-range {
-    margin: 15px;
-    padding: 30px 25px;
-    box-shadow: 0px 2px 8px 5px rgba($color: #000000, $alpha: 0.05);
-    display: flex;
-    flex-wrap: wrap;
-
-    .img {
-        display: block;
-        margin: 0px auto 20px auto;
-        flex: 0 0 100%;
-        max-width: 100%;
-
-        img {
-            max-width: 100%;
-            margin: 0 auto;
-            display: block;
-        }
-
+    h2 {
+      font-size: 1.8rem;
+      transform: all 0.3s;
     }
 
     p {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 20px 0;
+      line-height: 1.4;
+      font-size: 1.4rem;
     }
 
-    .name {
-        flex: 0 0 100%;
-        max-width: 100%;
-        line-height: 1.2;
-        text-align: center;
+    @media (min-width: 991px) {
+      h2 {
+        font-size: 1.4rem;
+      }
     }
-
-    .level {
-        flex: 0 0 100%;
-        max-width: 100%;
-        line-height: 1.2;
-        text-align: center;
+    @media (min-width: 1258px) {
+      h2 {
+        font-size: 1.8rem;
+      }
     }
+  }
 
+  .big {
+    @media (min-width: 640px) {
+      .img {
+        min-height: 37.7rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+    @media (min-width: 1258px) {
+      .img {
+        min-height: 50rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
 }
 
-//* ---- nav range box stop ---- */
+.article-investor_relations {
+  flex: 100%;
+  max-width: 100%;
+  position: relative;
+  padding: 0 1.5rem 3rem 1.5rem;
 
+  @media (min-width: 640px) {
+    flex: 33.333%;
+    max-width: 33.333%;
 
-//* ---- box services start ---- */
-.box-services {
-
-
-    .img {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    &:nth-child(3n + 1) {
+      padding-left: 0;
     }
 
-    .text {
-        padding: 30px 15px;
-
-        h3 {
-            margin: 0 0 20px 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0 0 0;
-
-            li {
-                margin: 10px 0;
-                line-height: 2;
-                padding-left: 40px;
-                position: relative;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                
-                    mask-position: center center;
-                    mask-repeat: no-repeat;
-                    mask-size: 100% 100%;
-                    width: 30px;
-                    height: 30px;
-                    display: inline-block;
-                    background: #000000;
-                    z-index: 50;
-                    transition: all 0.3s;
-                }
-
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    transition: all 0.3s;
-                }
-
-                &:hover {
-                    &::before {
-                        opacity: 0.5;
-                        left: 5px;
-                        transition: all 0.3s;
-                    }
-
-                    a {
-                        opacity: 0.5;
-                        transition: all 0.3s;
-                    }
-                }
-            }
-        }
-
-        .normal {
-            li {
-                padding: 0;
-                margin: 2.5px 0;
-
-                p {
-                    margin: 0 !important;
-                }
-
-                &::before {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 991px) {
-    .box-services {
-
-        .img {
-            min-height: 300px;
-        }
-    }
-}
-
-//* ---- box services stop ---- */
-
-//* ---- box new start ---- */
-
-.box-news {
-
-    .img {
-        position: relative;
-
-        img {
-            width: 100%;
-            display: block;
-            margin: 0;
-        }
-
-        a {
-            position: absolute;
-            padding: 5px 15px;
-            font-weight: bold;
-            bottom: 0;
-            left: 0;
-            text-decoration: none;
-            transition: all 0.3s;
-
-            &:hover {
-                opacity: 0.8;
-                transition: all 0.3s;
-            }
-        }
+    &:nth-child(3n + 3) {
+      padding-left: 1.5rem;
+      padding-right: 0;
     }
 
-    .text {
-        padding: 30px 15px;
-        display: flex;
-        flex-wrap: wrap;
-
-        h4 {
-            margin: 0;
-            display: block;
-            width: 100%;
-            text-align: left;
-        }
-
-        span {
-            margin: 10px 0;
-            font-weight: bold;
-
-            a {
-                font-weight: 700;
-                display: inline-block;
-                margin: 0;
-
-                &::after {
-                    display: none;
-                }
-            }
-        }
-
-        a {
-            margin: 20px 0 0 0;
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-left: auto;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-
-            &::after {
-                content: "";
-                
-                mask-position: center center;
-                mask-repeat: no-repeat;
-                mask-size: 100% 100%;
-                width: 30px;
-                height: 30px;
-                display: inline-block;
-                background: #000000;
-                z-index: 50;
-                margin-left: 10px;
-                margin-right: 0px;
-                transition: all 0.3s;
-            }
-
-            &:hover {
-                transition: all 0.3s;
-                opacity: 0.5;
-
-                &::after {
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    transition: all 0.3s;
-                }
-            }
-        }
+    &:nth-child(3n + 4) {
+      display: none;
     }
-}
+  }
+  @media (min-width: 1258px) {
+    flex: 25%;
+    max-width: 25%;
 
-//* ---- box new stop ---- */
-
-
-//* ---- box faq start ---- */
-.box-faq {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    flex: 100%;
-
-    .title {
-        padding: 20px 15px;
-        margin: 10px 0;
-        font-weight: bold;
-        box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.05);
-        max-width: 100%;
-        flex: 100%;
-        position: relative;
-        cursor: pointer;
-
-        &::after {
-            content: "";
-   
-            -webkit-mask-position: center center;
-            mask-position: center center;
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            z-index: 50;
-            right: 15px;
-            top: 15px;
-            transform: rotate(0);
-            background: #000000;
-            transition: all 0.3s;
-        }
-
-        &:hover {
-            color: #FFCC00;
-            box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.08);
-
-            &::after {
-                background: #FFCC00;
-            }
-        }
+    &:nth-child(3n + 1) {
+      padding-left: 0;
     }
 
-    .title.active {
-        &::after {
-            transform: rotate(90deg);
-            transition: all 0.3s;
-        }
+    &:nth-child(3n + 3) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
-    .text {
-        padding: 30px 15px;
+    &:nth-child(3n + 4) {
+      display: block;
+      padding-right: 0rem;
+      padding-left: 1.5rem;
     }
-}
+  }
 
-//* ---- box faq stop ---- */
-
-//* ---- box wcag start ---- */
-
-.box-wcag {
-    position: fixed;
-    top: 298px;
-    right: 0;
-    z-index: 999;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    min-height: 200px;
-    transition: all 0.3s;
-
-    .open {
-        width: 51px;
-        height: 50px;
-        position: absolute;
-        left: -50px;
-        top: 0;
-        padding: 10px 10px;
-
-        i {
-            opacity: 1;
-            transition: all 0.3s;
-
-            &::after {
-                content: "";
-
-                mask-position: center center;
-                mask-repeat: no-repeat;
-                mask-size: 100% 100%;
-                width: 30px;
-                height: 30px;
-                display: block;
-                z-index: 50;
-                transition: all 0.3s;
-            }
-        }
-
-        &:hover {
-            i {
-                opacity: 0.5;
-                transition: all 0.3s;
-            }
-        }
-    }
-
-    .inactive {
-        opacity: 0.5;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        display: table;
-        list-style: none;
-
-        li {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 10px 0;
-
-            button {
-                background: transparent;
-                font-size: 30px;
-                border: 0;
-                margin: 0 auto;
-                opacity: 1;
-
-                &:focus {
-                    outline: none;
-                }
-
-                &:hover {
-                    opacity: 0.5;
-                }
-            }
-        }
-
-        .title {
-            font-weight: bold;
-        }
-    }
-}
-
-.box-wcag.active {
-    .open {
-        i {
-            &::after {
-                content: "";
-    
-                transition: all 0.3s;
-            }
-        }
-
-        &:hover {
-            i {
-                opacity: 0.5;
-                transition: all 0.3s;
-            }
-        }
-    }
-}
-
-
-//* ---- box wcag stop ---- */
-
-
-//* ---- box map start ---- */
-.box-map {
-    min-height: 450px;
-}
-
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-
-    .resp-iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-}
-
-//* ---- box map stop ---- */
-
-//* ---- box meta start ---- */
-.box-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding-bottom: 30px;
-
-    .info {
-        flex: 0 0 100%;
-        max-width: 100%;
-        display: block;
-        position: relative;
-        margin-bottom: 30px;
-        padding-bottom: 5px;
-        border-bottom: 5px solid #FFCC00;
-
-        strong {
-            padding: 10px 20px;
-        }
-    }
-
-    .btn {
-        flex: 0 0 100%;
-        max-width: 100%;
-        display: block;
-        position: relative;
-    }
-}
-
-//* ---- box meta stop ---- */
-
-
-
-//* ---- box meta start ---- */
-.classic-link {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-        line-height: 1.5;
-
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            position: relative;
-
-            &::before {
-                content: "";
-
-                mask-position: center center;
-                mask-repeat: no-repeat;
-                mask-size: 100% 100%;
-                width: 30px;
-                height: 30px;
-                display: inline-block;
-                background: #000000;
-                z-index: 50;
-                top: 8px;
-                margin-left: 0;
-                margin-right: 10px;
-                position: relative;
-                transition: all 0.3s;
-            }
-
-            &:hover {
-                opacity: 0.5;
-
-
-                &::before {
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    transition: all 0.3s;
-                }
-            }
-        }
-    }
-}
-
-//* ---- box meta stop ---- */
-
-
-//* ---- box blockquote stop ---- */
-blockquote {
-    margin: 0;
-    padding: 40px 80px;
-    line-height: 1.5;
-    position: relative;
-
-    &::after {
-        content: ",,";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 10px;
-        line-height: 0;
-        font-size: 100px;
-        letter-spacing: -10px;
-    }
-}
-
-@media(max-width: 991px) {
-    blockquote {
-        padding: 30px 15px;
-
-        &::after {
-            top: 0;
-            left: 10px;
-            line-height: 0;
-            font-size: 50px;
-            letter-spacing: -5px;
-        }
-    }
-}
-
-//* ---- box blockquote stop ---- */
-
-//* ---- box video stop ---- */
-.box-video {
-    a {
-        display: table;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: #000000;
-            opacity: 0.6;
-            transition: all 0.3s;
-            z-index: 25;
-        }
-
-        &::after {
-            content: "";
-
-            mask-position: center center;
-            mask-repeat: no-repeat;
-            mask-size: 100% 100%;
-            width: 100px;
-            height: 100px;
-            display: block;
-            position: absolute;
-            z-index: 50;
-            top: calc(50% - 50px);
-            left: calc(50% - 50px);
-            background: #FFCC00;
-            transition: all 0.3s
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            z-index: 0;
-            position: relative;
-        }
-
-        &:hover {
-            &::after {
-                transition: all 0.3s;
-                background: #FFCC00 + 30;
-            }
-        }
-    }
-}
-
-//* ---- box video stop ---- */
-
-//* ---- box share stop ---- */
-.box-share {
-    display: inline-block;
-    padding: 20px 0;
-
-    .title-share {
-        p {
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-
-            &::after {
-                content: '';
-                position: relative;
-                display: block;
-                width: 100%;
-                height: 3px;
-                background: #FFCC00;
-                left: 0;
-                bottom: 0;
-            }
-        }
-    }
-
-    .btn {
-        padding-left: 50px;
-    }
-}
-
-@media (max-width: 991px) {
-    .box-share {
-        .btn {
-            display: block;
-        }
-    }
-}
-
-//* ---- box share stop ---- */
-
-
-//* ---- box hot line start ---- */
-.box-hot_line {
-    .icon {
-        width: 150px;
-        height: 150px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    strong {
-        display: block;
-        text-align: center;
-    }
-
-    a {
-        font-weight: bold;
-        display: block;
-        text-align: center;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-
-    .add-image {
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        text-decoration: underline;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-}
-
-//* ---- box hot line stop ---- */
-
-//* ---- box steps start ---- */
-.box-steps {
+  a {
+    padding: 1rem;
     display: block;
-    margin: 15px auto;
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-color: #ececec;
 
-    .step {
-        padding: 40px 20px;
+    &:hover {
+      opacity: 1;
+      h2 {
+        opacity: 0.6;
+      }
     }
 
+    p {
+      line-height: 1.4;
+      font-size: 1.4rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      transform: all 0.3s;
+    }
+  }
 }
 
-//* ---- box steps stop ---- */
-
 //####################################################################################################################
 //####################################################################################################################
-//############################################ CORE SYSTEM BOX STOP ##################################################
+//############################################ SYSTEM BOX STOP #######################################################
 //####################################################################################################################
 //####################################################################################################################

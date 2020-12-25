@@ -26,6 +26,14 @@
         padding: 3rem 0;
         position: relative;
 
+        @media (min-width: 991px) {
+          padding: 3rem 17.6rem;
+        }
+
+        @media (min-width: 640px) {
+          padding: 3rem 10.5rem;
+        }
+
         &::before {
           top: 0;
           left: 0;
@@ -51,6 +59,39 @@
         text-transform: uppercase;
       }
     }
+  }
+}
+
+.section-big_title {
+  padding: 10rem 1.5rem;
+
+  header {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #000000;
+    h1 {
+      line-height: 1;
+      font-size: 3.5rem;
+    }
+  }
+
+  .article-header:nth-child(2) {
+    margin-bottom: 0 !important;
+  }
+
+  footer {
+    flex: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  @media (min-width: 991px) {
+    padding: 10rem 17.6rem;
+  }
+
+  @media (min-width: 640px) {
+    padding: 10rem 10.5rem;
   }
 }
 
