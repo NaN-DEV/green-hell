@@ -6,6 +6,14 @@
 
 //* ---- Header ----  */
 
+.boxHeader {
+  z-index: 0;
+  content: '';
+  height: 11rem;
+  display: block;
+  position: relative;
+}
+
 header {
   top: 0;
   left: 0;
@@ -14,6 +22,7 @@ header {
   display: flex;
   position: fixed;
   flex-wrap: wrap;
+  z-index: 999;
 
   .top {
     width: 100%;
@@ -52,7 +61,7 @@ header {
       display: block;
       margin: 0.25rem 0;
       transform-origin: 0 0;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
     }
 
     .buttonOpen span:nth-child(1) {

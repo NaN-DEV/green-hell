@@ -13,5 +13,3 @@ hamburger.addEventListener('click', function () {
 
   return null
 })
-
-console.log(hamburger)

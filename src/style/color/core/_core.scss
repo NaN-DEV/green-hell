@@ -1,149 +1,136 @@
 // BG COLOR GENERATOR CLASS
 @if $bootscript-text-color-on-off {
+  @each $breakpoint-color in $bootscript-color-list {
+    $name: nth($breakpoint-color, 1);
+    $color-hex: nth($breakpoint-color, 2);
+    $color-rgb: nth($breakpoint-color, 3);
 
-    @each $breakpoint-color in $bootscript-color-list {
-        $name: nth($breakpoint-color, 1);
-        $color-hex: nth($breakpoint-color, 2);
-        $color-rgb: nth($breakpoint-color, 3);
+    .bg-#{$name} {
+      background: $color-hex !important;
 
-        .bg-#{$name} {
-            background: $color-hex !important;
+      &::before {
+        background-color: $color-hex;
+      }
 
-            &::before {
-                background-color: $color-hex;
-            }
-
-            &::after {
-                background-color: $color-hex;
-            }
-        }
+      &::after {
+        background-color: $color-hex;
+      }
     }
+  }
 }
 
 // BORDER COLOR GENERATOR CLASS
 @if $bootscript-text-color-on-off {
+  @each $breakpoint-color in $bootscript-color-list {
+    $name: nth($breakpoint-color, 1);
+    $color-hex: nth($breakpoint-color, 2);
+    $color-rgb: nth($breakpoint-color, 3);
 
-    @each $breakpoint-color in $bootscript-color-list {
-        $name: nth($breakpoint-color, 1);
-        $color-hex: nth($breakpoint-color, 2);
-        $color-rgb: nth($breakpoint-color, 3);
-
-        .border-#{$name} {
-            border-color: $color-hex !important;
-        }
+    .border-#{$name} {
+      border-color: $color-hex !important;
     }
+  }
 }
-
 
 // BACKGROUND COLOR GENERATOR CLASS
 @if $bootscript-background-color-on-off {
+  @each $breakpoint-color in $bootscript-color-list {
+    $name: nth($breakpoint-color, 1);
+    $color-hex: nth($breakpoint-color, 2);
+    $color-rgb: nth($breakpoint-color, 3);
 
-    @each $breakpoint-color in $bootscript-color-list {
-        $name: nth($breakpoint-color, 1);
-        $color-hex: nth($breakpoint-color, 2);
-        $color-rgb: nth($breakpoint-color, 3);
-
-        .text-#{$name} {
-            color: $color-hex !important;
-        }
+    .text-#{$name} {
+      color: $color-hex !important;
     }
+  }
 }
-
 
 // BUTTON COLOR GENERATOR CLASS
 @if $bootscript-button-color-normal-on-off {
+  @each $breakpoint in $bootscript-breakpoints {
+    $name: nth($breakpoint, 1);
+    $size: nth($breakpoint, 2);
+    $container: nth($breakpoint, 3);
 
-    @each $breakpoint in $bootscript-breakpoints {
-        $name: nth($breakpoint, 1);
-        $size: nth($breakpoint, 2);
-        $container: nth($breakpoint, 3);
+    @each $breakpoint-color in $bootscript-color-list {
+      $colorName: nth($breakpoint-color, 1);
+      $color-hex: nth($breakpoint-color, 2);
+      $color-rgb: nth($breakpoint-color, 3);
 
+      @if $size==0 {
+        .btn-#{$colorName} {
+          color: #000000;
+          background: $color-hex !important;
+          border-color: $color-hex !important;
 
-        @each $breakpoint-color in $bootscript-color-list {
-            $colorName: nth($breakpoint-color, 1);
-            $color-hex: nth($breakpoint-color, 2);
-            $color-rgb: nth($breakpoint-color, 3);
-
-            @if $size==0 {
-                .btn-#{$colorName} {
-                    color: #ffffff;
-                    background: $color-hex !important;
-                    border-color: $color-hex !important;
-
-                    &:hover {
-                        background: $color-hex - 40 !important;
-                        border-color: $color-hex - 40 !important;
-                    }
-                }
-            }
-
-            @media (min-width: $size) {
-                @if $size==0 {}
-
-                @else {
-
-                    .btn-#{$name}-#{$colorName} {
-                        color: #ffffff;
-                        background: $color-hex !important;
-                        border-color: $color-hex !important;
-
-                        &:hover {
-                            background: $color-hex - 40 !important;
-                            border-color: $color-hex - 40 !important;
-                        }
-                    }
-                }
-            }
+          &:hover {
+            opacity: 1 !important;
+            background: $color-hex - 40 !important;
+            border-color: $color-hex - 40 !important;
+          }
         }
+      }
+
+      @media (min-width: $size) {
+        @if $size==0 {
+        } @else {
+          .btn-#{$name}-#{$colorName} {
+            color: #000000;
+            background: $color-hex !important;
+            border-color: $color-hex !important;
+
+            &:hover {
+              opacity: 1 !important;
+              background: $color-hex - 40 !important;
+              border-color: $color-hex - 40 !important;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
-
 @if $bootscript-button-color-normal-out-line-on-off {
+  @each $breakpoint in $bootscript-breakpoints {
+    $name: nth($breakpoint, 1);
+    $size: nth($breakpoint, 2);
+    $container: nth($breakpoint, 3);
 
+    @each $breakpoint-color in $bootscript-color-list {
+      $colorName: nth($breakpoint-color, 1);
+      $color-hex: nth($breakpoint-color, 2);
+      $color-rgb: nth($breakpoint-color, 3);
 
-    @each $breakpoint in $bootscript-breakpoints {
-        $name: nth($breakpoint, 1);
-        $size: nth($breakpoint, 2);
-        $container: nth($breakpoint, 3);
+      @if $size==0 {
+        .btn-outline-#{$colorName} {
+          color: $color-hex !important;
+          background: transparent !important;
+          border-color: $color-hex !important;
 
-
-        @each $breakpoint-color in $bootscript-color-list {
-            $colorName: nth($breakpoint-color, 1);
-            $color-hex: nth($breakpoint-color, 2);
-            $color-rgb: nth($breakpoint-color, 3);
-
-            @if $size==0 {
-                .btn-outline-#{$colorName} {
-                    color: $color-hex !important;
-                    background: transparent !important;
-                    border-color: $color-hex !important;
-
-                    &:hover {
-                        color: $color-hex - 100 !important;
-                        background: $color-hex - 40 !important;
-                        border-color: $color-hex - 40 !important;
-                    }
-                }
-            }
-
-            @media (min-width: $size) {
-                @if $size==0 {}
-
-                @else {
-
-                    .btn-outline-#{$name}-#{$colorName} {
-                        color: $color-hex !important;
-                        background: transparent !important;
-                        border-color: $color-hex !important;
-
-                        &:hover {
-                            background: $color-hex - 40 !important;
-                            border-color: $color-hex - 40 !important;
-                        }
-                    }
-                }
-            }
+          &:hover {
+            color: $color-hex - 100 !important;
+            background: $color-hex - 40 !important;
+            border-color: $color-hex - 40 !important;
+          }
         }
+      }
+
+      @media (min-width: $size) {
+        @if $size==0 {
+        } @else {
+          .btn-outline-#{$name}-#{$colorName} {
+            color: $color-hex !important;
+            background: transparent !important;
+            border-color: $color-hex !important;
+
+            &:hover {
+              background: $color-hex - 40 !important;
+              border-color: $color-hex - 40 !important;
+            }
+          }
+        }
+      }
     }
+  }
 }
