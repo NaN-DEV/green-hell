@@ -163,6 +163,89 @@
   }
 }
 
+.news-short {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 3rem;
+
+  .img {
+    width: 100%;
+    display: block;
+    min-height: 31.3rem;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    background-image: url(../../assets/img/human.png);
+
+    @media (min-width: 991px) {
+      width: 43.8rem;
+      min-height: 43.8rem;
+    }
+
+    @media (min-width: 1258px) {
+      width: 49rem;
+      min-height: 27.5rem;
+    }
+  }
+
+  .content {
+    flex: 100%;
+    display: flex;
+    padding: 3rem;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: column;
+    background-color: #ececec;
+
+    @media (min-width: 991px) {
+      flex: calc(100% - 43.8rem);
+      max-width: calc(100% - 43.8rem);
+    }
+
+    @media (min-width: 1258px) {
+      flex: calc(100% - 49rem);
+      max-width: calc(100% - 49rem);
+    }
+
+    .data {
+      width: 100%;
+      color: black;
+      text-align: left;
+      line-height: 1.4rem;
+      font-weight: normal;
+    }
+
+    .description {
+      display: none;
+
+      @media (min-width: 991px) {
+        width: 100%;
+        display: block;
+        text-align: left;
+        color: #080909;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    a {
+      display: block;
+      padding-top: 3rem;
+      color: #999999;
+      margin-top: auto;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      @media (min-width: 991px) {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
 //####################################################################################################################
 //####################################################################################################################
 //############################################ SYSTEM BOX STOP #######################################################

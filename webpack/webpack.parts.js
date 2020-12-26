@@ -1,22 +1,19 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin")
-const webpack = require("webpack")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const path = require("path")
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const CompressionPlugin = require("compression-webpack-plugin")
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
-module.exports.loadJS = ({
-  test = /\.(js|jsx)$/,
-  exclude = /node_modules/,
-} = {}) => {
+module.exports.loadJS = ({ test = /\.(js|jsx)$/, exclude = /node_modules/ } = {}) => {
   return {
     module: {
       rules: [
         {
           test,
           exclude,
-          use: "babel-loader",
+          use: 'babel-loader',
         },
       ],
     },
@@ -27,7 +24,7 @@ module.exports.loadCSS = ({
   test = /\.s?[ac]ss$/,
   exclude = /node_modules/,
   extractOptions = {
-    filename: "nan.min.css",
+    filename: 'nan.min.css',
   },
 } = {}) => {
   return {
@@ -39,24 +36,24 @@ module.exports.loadCSS = ({
           use: [
             MiniCssExtractPlugin.loader,
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 url: true,
                 sourceMap: true,
               },
             },
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
-                plugins: (loader) => [new require("autoprefixer")()],
+                plugins: (loader) => [new require('autoprefixer')()],
                 sourceMap: true,
               },
             },
             {
-              loader: "resolve-url-loader",
+              loader: 'resolve-url-loader',
             },
             {
-              loader: "sass-loader",
+              loader: 'sass-loader',
               options: {
                 sourceMap: true,
               },
@@ -74,8 +71,8 @@ module.exports.loadIMG = ({
   exclude = /node_modules/,
   fileOptions = {
     limit: 30000,
-    name: "./[path][name].[ext]",
-    context: path.resolve(__dirname, "./../src/"),
+    name: './[path][name].[ext]',
+    context: path.resolve(__dirname, './../src/'),
   },
   imgOptions,
 } = {}) => {
@@ -87,11 +84,11 @@ module.exports.loadIMG = ({
           exclude,
           use: [
             {
-              loader: "file-loader",
+              loader: 'file-loader',
               options: fileOptions,
             },
             {
-              loader: "image-webpack-loader",
+              loader: 'image-webpack-loader',
               options: imgOptions,
             },
           ],
@@ -106,8 +103,8 @@ module.exports.loadFONT = ({
   exclude = /node_modules/,
   optionsFont = {
     limit: 30000,
-    name: "./[path][name].[ext]",
-    context: path.resolve(__dirname, "./../src/"),
+    name: './[path][name].[ext]',
+    context: path.resolve(__dirname, './../src/'),
   },
 } = {}) => {
   return {
@@ -118,7 +115,7 @@ module.exports.loadFONT = ({
           exclude,
           use: [
             {
-              loader: "file-loader",
+              loader: 'file-loader',
               options: optionsFont,
             },
           ],
@@ -136,29 +133,25 @@ module.exports.loadHTML = ({
   },
   pluginsHTML = [
     new HtmlWebpackPlugin({
-      filename: "index.html",
-
-      template: "./src/index.html",
+      filename: 'index.html',
+      template: './src/index.html',
     }),
     new HtmlWebpackPlugin({
-      filename: "about.html",
-
-      template: "./src/about.html",
+      filename: 'about.html',
+      template: './src/about.html',
     }),
     new HtmlWebpackPlugin({
-      filename: "faq.html",
-
-      template: "./src/newsList.html",
+      filename: 'newsList.html',
+      template: './src/newsList.html',
     }),
     new HtmlWebpackPlugin({
-      filename: "news.html",
+      filename: 'newsPost.html',
 
-      template: "./src/newsPost.html",
+      template: './src/newsPost.html',
     }),
-
     new HtmlWebpackPlugin({
-      filename: "contact.html",
-      template: "./src/contact.html",
+      filename: 'contact.html',
+      template: './src/contact.html',
     }),
   ],
 } = {}) => {
@@ -170,7 +163,7 @@ module.exports.loadHTML = ({
           exclude,
           use: [
             {
-              loader: "html-loader",
+              loader: 'html-loader',
               options: optionsHTML,
             },
           ],
@@ -188,9 +181,9 @@ module.exports.cleanPlugin = () => {
 }
 
 module.exports.BrowserSync = ({
-  host = "localhost",
+  host = 'localhost',
   port = 3301,
-  proxy = "http://localhost:3305",
+  proxy = 'http://localhost:3305',
   options = {
     reload: true,
   },
@@ -203,7 +196,7 @@ module.exports.BrowserSync = ({
           port,
           proxy,
         },
-        options
+        options,
       ),
     ],
   }
@@ -213,7 +206,7 @@ module.exports.CompressionPluginProd = () => {
   return {
     plugins: [
       new CompressionPlugin({
-        algorithm: "gzip",
+        algorithm: 'gzip',
       }),
     ],
   }
