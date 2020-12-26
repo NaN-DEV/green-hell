@@ -6,7 +6,7 @@
 
 //* ---- Header ----  */
 
-.boxHeader {
+.main_nav-box {
   z-index: 0;
   content: '';
   height: 11rem;
@@ -14,7 +14,7 @@
   position: relative;
 }
 
-nav {
+.main_nav {
   top: 0;
   left: 0;
   width: 100%;
@@ -206,6 +206,61 @@ nav {
     .bottom {
       padding: 0 10.5rem;
     }
+  }
+}
+
+.main_footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 1.5rem;
+  background-color: #0f0f10;
+
+  .left {
+    position: relative;
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .right {
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    align-items: center;
+  }
+
+  img {
+    opacity: 0.6;
+    height: 74px;
+    display: block;
+  }
+
+  p {
+    opacity: 0.4;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    max-width: 11.4rem;
+    position: relative;
+    text-align: center;
+  }
+
+  a {
+    flex: 100%;
+    max-width: 100%;
+    display: block;
+    color: #b0b0b0;
+    white-space: nowrap;
+    line-height: 1.46rem;
+    padding: 0.3rem 0;
+  }
+
+  @media (min-width: 991px) {
+    padding: 2rem 17.6rem;
+  }
+
+  @media (min-width: 640px) {
+    padding: 2rem 10.5rem;
   }
 }
 

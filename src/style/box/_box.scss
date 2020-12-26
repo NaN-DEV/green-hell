@@ -97,7 +97,7 @@
   flex: 100%;
   max-width: 100%;
   position: relative;
-  padding: 0 1.5rem 3rem 1.5rem;
+  padding: 0 0 3rem 0;
 
   @media (min-width: 640px) {
     flex: 33.333%;
@@ -116,6 +116,7 @@
       display: none;
     }
   }
+
   @media (min-width: 1258px) {
     flex: 25%;
     max-width: 25%;

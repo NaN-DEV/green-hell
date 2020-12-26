@@ -32,6 +32,9 @@
 
         @media (min-width: 640px) {
           padding: 3rem 10.5rem;
+          .col-12 {
+            padding: 0;
+          }
         }
 
         &::before {
@@ -77,10 +80,6 @@
     }
   }
 
-  .article-header:nth-child(2) {
-    margin-bottom: 0 !important;
-  }
-
   footer {
     flex: 100%;
     max-width: 100%;
@@ -88,10 +87,129 @@
   }
   @media (min-width: 991px) {
     padding: 10rem 17.6rem;
+
+    .article-header:nth-child(2) {
+      margin-bottom: 0 !important;
+    }
   }
 
   @media (min-width: 640px) {
     padding: 10rem 10.5rem;
+  }
+}
+
+.section-gmae {
+  padding: 10rem 1.5rem;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  background-image: url(../../assets/img/bgGame.png);
+
+  ul {
+    width: 100%;
+    display: flex;
+
+    li {
+      flex: 100%;
+      max-width: 100%;
+      position: relative;
+    }
+  }
+
+  .img {
+    flex: 100%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+
+    @media (min-width: 991px) {
+      flex: 75%;
+      max-width: 75%;
+    }
+  }
+
+  .box {
+    flex: 100%;
+    max-width: 100%;
+    padding: 2rem;
+
+    position: relative;
+    background-color: black;
+
+    @media (min-width: 991px) {
+      flex: 25%;
+      max-width: 25%;
+    }
+  }
+  h1 {
+    flex: 100%;
+    color: white;
+    max-width: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+    line-height: 3.36rem;
+    padding-bottom: 1.1rem;
+
+    @media (min-width: 991px) {
+      text-align: left;
+    }
+  }
+
+  p {
+    flex: 100%;
+    color: white;
+    max-width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.1rem;
+
+    @media (min-width: 991px) {
+      text-align: left;
+    }
+  }
+  a {
+    display: table;
+    margin: 2rem auto 0 auto;
+
+    @media (min-width: 991px) {
+      width: 100%;
+      min-width: 100%;
+      margin: 100% auto 0 auto;
+    }
+  }
+
+  @media (min-width: 991px) {
+    padding: 5rem 17.6rem;
+  }
+
+  @media (min-width: 640px) {
+    padding: 5rem 10.5rem;
+  }
+}
+
+.section-social {
+  padding: 5rem 1.5rem;
+  background-color: #a0d700;
+
+  ul {
+    margin: 0 auto;
+    display: flex;
+    li {
+      display: flex;
+      padding: 0 1.5rem;
+      align-items: center;
+
+      a {
+      }
+    }
+  }
+
+  @media (min-width: 991px) {
+    padding: 5rem 17.6rem;
+  }
+
+  @media (min-width: 640px) {
+    padding: 5rem 10.5rem;
   }
 }
 
