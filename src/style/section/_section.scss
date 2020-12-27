@@ -204,12 +204,105 @@
     }
   }
 
+  @media (min-width: 640px) {
+    padding: 5rem 10.5rem;
+  }
+
   @media (min-width: 991px) {
     padding: 5rem 17.6rem;
+  }
+}
+
+.section-hero_img {
+  width: 100%;
+  display: flex;
+  padding: 10rem;
+  align-items: center;
+  min-height: 19.2rem;
+  padding: 5rem 1.5rem;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  background-repeat: repeat;
+  background-position: center center;
+  background-image: url(../../assets/img/fulltem.png);
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 10rem;
+    position: relative;
   }
 
   @media (min-width: 640px) {
     padding: 5rem 10.5rem;
+  }
+
+  @media (min-width: 991px) {
+    min-height: 31.5rem;
+    padding: 5rem 17.6rem;
+    img {
+      max-height: 16rem;
+    }
+  }
+
+  @media (min-width: 1258px) {
+    min-height: 48.3rem;
+    img {
+      max-height: 25rem;
+    }
+  }
+}
+
+.article-news_about {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+
+  .img {
+    flex: 100%;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 1.5rem;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    @media (min-width: 991px) {
+      flex: 36rem;
+      max-width: 36rem;
+      padding-bottom: 0;
+      padding-right: 1.5rem;
+    }
+
+    @media (min-width: 1258px) {
+      flex: 49rem;
+      max-width: 49rem;
+    }
+  }
+
+  .content {
+    flex: 100%;
+    max-width: 100%;
+    color: #060707;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    @media (min-width: 991px) {
+      padding-left: 1.5rem;
+      flex: clac(100% -36rem);
+      max-width: calc(100% - 36rem);
+    }
+
+    @media (min-width: 1258px) {
+      flex: calc(100% -49rem);
+      max-width: calc(100% - 49rem);
+    }
   }
 }
 
