@@ -19,6 +19,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   font-style: normal;
   color: $bootscript-font-color-main;
   font-size: $bootscript-font-size-main;
