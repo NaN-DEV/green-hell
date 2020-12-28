@@ -1,18 +1,149 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Green Hell News Post</title>
-    <link href="./nan.min.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <header>ok</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Green Hell List News</title>
+</head>
 
-    <!-- JavaScript Zone Start -->
-    <script src="./app/bootscript.js" defer></script>
-    <!-- JavaScript Zone STOP -->
-  </body>
+<body>
+  <!-- header start -->
+  <nav class="main_nav">
+    <div class="col-12 top ">
+      <p>
+        Europen Union
+        <span><img alt="flag europe" title="flag europe" src="./assets/icon/flagEurope.svg" /></span>
+      </p>
+    </div>
+    <div class="col-12 bottom bg-black ">
+
+      <div class="row ">
+
+        <div class="col-lg-3 col-9 logo pl-0">
+          <a href="#" title="creepy jar"><img alt="creepy jar logo" src="./assets/brand/logo.png" /></a>
+        </div>
+
+        <div class="col-3 d-flex d-lg-none pr-0 hamburger">
+          <button id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+
+        <div class="col-12 col-lg-9 menuBox" id="menuBox">
+          <div class="row">
+            <div class="col-12 p-0 d-flex order-2 order-lg-1">
+              <ul class="language ml-lg-auto">
+                <li class="text-white ">
+                  <p>Language:</p>
+                </li>
+                <li><a href="#" class="text-white" title="PL">PL</a></li>
+                <li class="active"><a href="#" class="text-white" title="EN">EN</a></li>
+              </ul>
+            </div>
+            <div class="col-12 p-0 d-flex order-1 order-lg-2">
+              <ul class="menu ml-lg-auto">
+                <li><a href="index.html" class="text-white">HOME</a></li>
+                <li class="active"><a href="newsList.html" class="text-white">NEWS</a></li>
+                <li><a href="about.html" class="text-white">ABOUTS</a></li>
+                <li><a href="#" class="text-white">GAME</a></li>
+                <li><a href="#" class="text-white">INVESTORS</a></li>
+                <li><a href="contact.html" class="text-white">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </nav>
+  <br class="main_nav-box" />
+  <!-- header stop -->
+
+  <!-- section start -->
+  <section class="section-hero_img" style="background-image: url(./assets/img/fulltem.png);">
+
+  </section>
+  <!-- section stop -->
+
+  <!-- section start -->
+  <section class="section-full_article">
+    <div class="row">
+      <div class="col-12 px-0">
+        <div class="data">10.12.2020</div>
+        <h1>Supreme Court vote row precedes Trump-Biden debate</h1>
+        <strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+          corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+          the holistic world view of disruptive innovation via workplace diversity and empowerment.</strong>
+
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+          corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+          the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table
+          win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal
+          that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User
+          generated content in real-time will have multiple touchpoints for offshoring. Capitalize on low hanging fruit
+          to identify a ballpark value added activity to beta test. Override the digital divide with additional
+          clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on
+          focusing solely on the bottom line. Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. </p>
+
+        <img src="./assets/img/gameimg.png" />
+
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+          corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+          the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table
+          win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal
+          that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User
+          generated content in real-time will have multiple touchpoints for offshoring. Capitalize on low hanging fruit
+          to identify a ballpark value added activity to beta test. Override the digital divide with additional
+          clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on
+          focusing solely on the bottom line. Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. </p>
+
+        <div class="lightbox">
+          <div class="img">
+            <img src="./assets/img/human.png">
+          </div>
+          <div class="img">
+            <img src="./assets/img/gameimg.png">
+          </div>
+          <div class="img">
+            <img src="./assets/img/greenHell.png">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- section stop -->
+
+
+  <!-- footer start -->
+  <footer class="main_footer">
+    <div class="row">
+      <div class="left">
+
+        <a href="#" title="creepy jar"><img alt="creepy jar logo" src="./assets/brand/logo.png" /></a>
+        <p>© Creepy Jar 2020. All rights reserved.</p>
+      </div>
+      <div class="right">
+        <div>
+          <a href="#">Cookies & Privacy policy</a>
+          <a href="#">European Union Projects</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer stop -->
+
+  <div class="modal-lightbox" id="modalLightbox">
+    <header><span class="close">&times;</span></header>
+    <div class="content">
+      <img class="img">
+    </div>
+    <!-- Next/previous controls -->
+    <a class="prev-lightbox" id="prevLightbox">&#10094;</a>
+    <a class="next-lightbox" id="nextLightbox">&#10095;</a>
+  </div>
+
+</body>
+
 </html>
