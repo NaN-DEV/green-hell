@@ -147,10 +147,15 @@
 
       li {
         width: 100%;
-        font-weight: bold;
         text-align: center;
         padding-left: 1rem;
         font-size: 3.4rem;
+
+        a {
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #ffffff !important;
+        }
 
         &:hover {
           a {
@@ -159,7 +164,7 @@
           }
         }
       }
-      .active {
+      .current-menu-item {
         a {
           color: #a0d700 !important;
         }
@@ -295,6 +300,26 @@
     position: relative;
     white-space: nowrap;
 
+    span {
+      color: #a0d700;
+    }
+
+    a,
+    span {
+      padding: 0 1rem;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      white-space: nowrap;
+    }
+
+    a {
+      color: black;
+      &:hover {
+        opacity: 1;
+        color: #a0d700;
+      }
+    }
+
     @media (max-width: 374px) {
       flex: 100%;
       max-width: 100%;
@@ -337,24 +362,6 @@
       @media (min-width: 1258px) {
         margin-left: 24rem;
       }
-    }
-  }
-
-  .active {
-    a {
-      color: #a0d700;
-    }
-  }
-
-  a {
-    color: black;
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    white-space: nowrap;
-
-    &:hover {
-      opacity: 1;
-      color: #a0d700;
     }
   }
 

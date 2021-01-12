@@ -14,6 +14,7 @@
 
 html {
   font-size: 62.5%;
+  margin-top: 0px !important;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   padding: 0;
   min-height: 100vh;
   font-style: normal;
+  margin-top: 0px !important;
   color: $bootscript-font-color-main;
   font-size: $bootscript-font-size-main;
   font-weight: $bootscript-font-weight-main;

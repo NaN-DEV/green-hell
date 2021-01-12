@@ -1,4 +1,4 @@
-.lightbox {
+.blocks-gallery-grid {
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   padding-bottom: 3rem;
   justify-content: center;
 
-  div {
+  figure {
     flex: 100%;
     display: block;
     max-width: 100%;
@@ -18,8 +18,8 @@
     &::before {
       transition: all 0.3s;
       opacity: 0;
-      top: 1.5rem;
-      left: 1.5rem;
+      top: 0;
+      left: 0;
       content: '+';
       display: flex;
       color: black;
@@ -27,8 +27,8 @@
       position: absolute;
       align-items: center;
       justify-content: center;
-      width: calc(100% - 3rem);
-      height: calc(100% - 3rem);
+      width: 100%;
+      height: calc(100% - 1.5rem);
       background-color: rgba(160, 215, 0, 0.5);
       box-shadow: 0 1px 5px 1px rgba(160, 215, 0, 0.5);
     }
@@ -47,7 +47,7 @@
 
   @media (min-width: 640px) {
     padding: 0 5rem;
-    div {
+    li {
       padding: 1.5rem;
       flex: calc(50% - 3rem);
       max-width: calc(50% - 3rem);

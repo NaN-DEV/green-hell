@@ -24,7 +24,7 @@ module.exports.loadCSS = ({
   test = /\.s?[ac]ss$/,
   exclude = /node_modules/,
   extractOptions = {
-    filename: 'nan.min.css',
+    filename: 'style.min.css',
   },
 } = {}) => {
   return {

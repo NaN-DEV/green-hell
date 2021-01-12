@@ -6,9 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Green Hell List News</title>
+<style>
+    body {
+      overflow: hidden;
+    }
+
+    .loader-container {
+      top: 0;
+      left: 0;
+      opacity: 1;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      z-index: 999999;
+      position: absolute;
+      transition: all 0.3s;
+      flex-direction: column;
+      justify-content: center;
+      background-color: black;
+    }
+
+    .loader-logo {
+      width: 100%;
+      display: contents;
+      position: relative;
+      justify-content: center;
+
+    }
+
+    .loader-logo img {
+      margin: 0 auto;
+      max-width: 200px;
+    }
+
+    .spinner {
+      width: 100%;
+      display: flex;
+      padding: 15px 0;
+      position: relative;
+      justify-content: center;
+    }
+
+    .spinner span {
+      width: 6px;
+      height: 30px;
+      margin: 0 2px;
+      display: inline-block;
+      background-color: #fff;
+      animation: stretchdelay 1.2s infinite ease-in-out;
+    }
+
+    .spinner span:nth-child(2) {
+      animation-delay: -1.1s;
+    }
+
+    .spinner span:nth-child(3) {
+      animation-delay: -1.0s;
+    }
+
+    .spinner span:nth-child(4) {
+      animation-delay: -0.9s;
+    }
+
+    .spinner span:nth-child(5) {
+      animation-delay: -0.8s;
+    }
+
+    @keyframes stretchdelay {
+
+      0%,
+      40%,
+      100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+      }
+
+      20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+      }
+    }
+  </style>
 </head>
 
 <body>
+
+  <div class="loader-container">
+    <div class="loader-logo"><img src="./assets/brand/logo.png" alt=""></div>
+    <div class="spinner">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+  </div>
   <!-- header start -->
   <nav class="main_nav">
     <div class="col-12 top ">
@@ -97,17 +191,24 @@
           focusing solely on the bottom line. Leverage agile frameworks to provide a robust synopsis for high level
           overviews. </p>
 
-        <div class="lightbox">
-          <div class="img">
-            <img src="./assets/img/human.png">
-          </div>
-          <div class="img">
-            <img src="./assets/img/gameimg.png">
-          </div>
-          <div class="img">
-            <img src="./assets/img/greenHell.png">
-          </div>
-        </div>
+         <ul class="blocks-gallery-grid">
+          <li class="blocks-gallery-item">
+            <figure>
+              <img src="./assets/img/human.png">
+            </figure>
+          </li>
+          <li class="blocks-gallery-item">
+            <figure>
+              <img src="./assets/img/greenHell.png">
+            </figure>
+          </li>
+          <li class="blocks-gallery-item">
+            <figure>
+              <img src="./assets/img/human.png">
+            </figure>
+          </li>
+        </ul>
+
 
       </div>
     </div>
