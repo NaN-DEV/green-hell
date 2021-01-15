@@ -27,16 +27,18 @@ class SliderNaN {
       this.carousel.addEventListener(
         'transitionend',
         (e) => {
-          if (this.direction === 1) {
-            this.carousel.prepend(this.carousel.lastElementChild)
-          } else {
-            this.carousel.appendChild(this.carousel.firstElementChild)
+          if (e.target.localName === 'ul') {
+            if (this.direction === 1) {
+              this.carousel.prepend(this.carousel.lastElementChild)
+            } else {
+              this.carousel.appendChild(this.carousel.firstElementChild)
+            }
+            this.carousel.style.transition = 'none'
+            this.carousel.style.transform = `translate(0)`
+            setTimeout(() => {
+              this.carousel.style.transition = 'all 0.3s'
+            })
           }
-          this.carousel.style.transition = 'none'
-          this.carousel.style.transform = `translate(0)`
-          setTimeout(() => {
-            this.carousel.style.transition = 'all 0.3s'
-          })
         },
         false,
       )
@@ -48,6 +50,7 @@ class SliderNaN {
     this.direction = -1
     this.root.style.justifyContent = 'flex-start'
     this.carousel.style.transform = `translate(-${100 / this.element}%)`
+
     return this
   }
 

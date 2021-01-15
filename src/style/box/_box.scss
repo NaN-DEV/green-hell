@@ -26,18 +26,41 @@
 
   .img {
     flex: 100%;
+    display: block;
     max-width: 100%;
+    overflow: hidden;
     position: relative;
     min-height: 31.3rem;
-    background-repeat: repeat;
-    background-image: url(../../assets/img/bgSlider.png);
-    background-position: center center;
+
+    div {
+      width: 100%;
+      display: block;
+      transform: scale(1);
+      min-height: 31.3rem;
+      transition: all 0.3s;
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center center;
+      background-image: url(../../assets/img/bgSlider.png);
+    }
+
+    &:hover {
+      div {
+        transform: scale(1.1);
+      }
+    }
 
     @media (min-width: 640px) {
       min-height: 11.3rem;
+      div {
+        min-height: 11.3rem;
+      }
     }
     @media (min-width: 1258px) {
       min-height: 15.7rem;
+      div {
+        min-height: 15.7rem;
+      }
     }
   }
 
@@ -74,7 +97,9 @@
   .big {
     @media (min-width: 640px) {
       .img {
-        min-height: 37.7rem;
+        div {
+          min-height: 37.7rem;
+        }
       }
 
       h2 {
@@ -83,7 +108,9 @@
     }
     @media (min-width: 1258px) {
       .img {
-        min-height: 50rem;
+        div {
+          min-height: 50rem;
+        }
       }
 
       h2 {
@@ -174,20 +201,41 @@
   .img {
     width: 100%;
     display: block;
+    overflow: hidden;
     min-height: 31.3rem;
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center center;
-    background-image: url(../../assets/img/human.png);
+
+    div {
+      width: 100%;
+      display: block;
+      transform: scale(1);
+      min-height: 31.3rem;
+      transition: all 0.3s;
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center center;
+      background-image: url(../../assets/img/human.png);
+    }
+
+    &:hover {
+      div {
+        transform: scale(1.1);
+      }
+    }
 
     @media (min-width: 991px) {
       width: 43.8rem;
       min-height: 43.8rem;
+      div {
+        min-height: 43.8rem;
+      }
     }
 
     @media (min-width: 1258px) {
       width: 49rem;
       min-height: 27.5rem;
+      div {
+        min-height: 27.5rem;
+      }
     }
   }
 
