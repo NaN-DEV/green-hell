@@ -5,6 +5,7 @@ document.addEventListener(
   'DOMContentLoaded',
   function () {
     // js module start
+  
     require('./plugin/menu/menu.js')
     require('./plugin/slider/slider')
     require('./plugin/lightbox/lightbox')

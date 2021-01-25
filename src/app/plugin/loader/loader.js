@@ -1,21 +1,23 @@
 const loader = document.querySelector('.loader-container')
 
 if (loader !== null) {
-  const cookes = document.cookie.split(';').filter(function (cooke) {
-    return cooke === 'loader'
+  const cookesSwitch = document.cookie.split(';').filter(function (item) {
+    return item === 'loader=1'
   }).length
 
-  if (!!cookes) {
+  if (cookesSwitch) {
+    console.log("on");
     loader.style.opacity = '0'
     setTimeout(() => {
       loader.style.display = 'none'
       document.body.style.overflow = 'auto'
-    }, 500)
+    }, 1000)
   }
 
-  document.cookie = 'loader'
+  document.cookie = 'loader=1'
 
   setTimeout(() => {
+    console.log("off");
     loader.style.opacity = '0'
     setTimeout(() => {
       loader.style.display = 'none'
