@@ -6,7 +6,7 @@ if (loader !== null) {
   }).length
 
   if (cookesSwitch) {
-    console.log("on");
+    console.log('on')
     loader.style.opacity = '0'
     setTimeout(() => {
       loader.style.display = 'none'
@@ -17,7 +17,6 @@ if (loader !== null) {
   document.cookie = 'loader=1'
 
   setTimeout(() => {
-    console.log("off");
     loader.style.opacity = '0'
     setTimeout(() => {
       loader.style.display = 'none'

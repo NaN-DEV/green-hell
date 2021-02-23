@@ -1,11 +1,11 @@
 const navManu = document.querySelector('.main_nav')
-const navManuTop = document.querySelector('.top').offsetHeight
 const hamburger = document.getElementById('hamburger')
 const menu = document.getElementById('menuBox')
 
 let offsetTopMenu = 0
 
 window.addEventListener('scroll', (e) => {
+  const navManuTop = document.querySelector('.top').scrollHeight
   const activeOffset = window.scrollY
 
   if (activeOffset > 100) {
